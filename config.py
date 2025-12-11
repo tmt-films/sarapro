@@ -22,7 +22,7 @@ MAX_ID = int(os.getenv("MAX_ID", 1500))
 VIDEOS_RANGE = list(range(MIN_ID, MAX_ID + 1))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "7668133494"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "8454765899"))
 
 #Port
 PORT = os.environ.get("PORT", "3435")
@@ -116,6 +116,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
 
 
 
