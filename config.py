@@ -14,7 +14,7 @@ APP_ID = int(os.environ.get("APP_ID", "9698652"))
 API_HASH = os.environ.get("API_HASH", "b354710ab18b84e00b65c62ba7a9c043")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002991186844"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002568581749"))
 
 MIN_ID = int(os.getenv("MIN_ID", 1))
 MAX_ID = int(os.getenv("MAX_ID", 1500))
@@ -116,6 +116,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
 
 
 
