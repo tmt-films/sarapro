@@ -17,7 +17,7 @@ API_HASH = os.environ.get("API_HASH", "b354710ab18b84e00b65c62ba7a9c043")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002568581749"))
 
 MIN_ID = int(os.getenv("MIN_ID", 1))
-MAX_ID = int(os.getenv("MAX_ID", 1500))
+MAX_ID = int(os.getenv("MAX_ID", 150))
 
 VIDEOS_RANGE = list(range(MIN_ID, MAX_ID + 1))
 
@@ -27,7 +27,7 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "8454765899"))
 #Port
 PORT = os.environ.get("PORT", "3435")
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://obito:umaid2008@cluster0.engyc.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "tsara")
+DB_NAME = os.environ.get("DATABASE_NAME", "66")
 
 IS_VERIFY = os.environ.get("IS_VERIFY", "false")
 
