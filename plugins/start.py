@@ -1,6 +1,3 @@
-
-# Don't remove This Line From Here. Tg: @rohit_1888 | @Codeflix_Bots
-
 import asyncio
 import base64
 import logging
@@ -39,13 +36,25 @@ logging.basicConfig(level=logging.INFO)
 IST = timezone("Asia/Kolkata")
 
 
-@Client.on_message(filters.command("start") & filters.private)
+
+
+
+@Bot.on_message(filters.command("start") & filters.private)
 async def start_command(client: Client, message: Message):
     id = message.from_user.id
     user_id = id
     text = message.text or ""
     logging.info(f"Received /start command from user ID: {id}")
 
+            # Check if user is banned
+    if await db.ban_user_exist(user_id):
+        return await message.reply_text(BAN_TXT, quote=True)
+        
+    
+    # Check if user is subscribed (check for all users including admins)
+    if not await is_subscribed(client, message):
+        return await not_joined(client, message)
+        
     # Fetch verify status + expiry duration
     try:
         verify_status = await db.get_verify_status(id) or {}
@@ -349,7 +358,14 @@ async def on_plan_status(client: Client, message: Message):
     ist = timezone("Asia/Kolkata")
 
     user_id = message.from_user.id
-
+        # Check if user is banned
+    if await db.ban_user_exist(user_id):
+        return await message.reply_text(BAN_TXT, quote=True)
+        
+    
+    # Check if user is subscribed (check for all users including admins)
+    if not await is_subscribed(client, message):
+        return await not_joined(client, message)
     # Check premium status
     is_premium = await is_premium_user(user_id)
 
@@ -432,18 +448,44 @@ async def on_plan_status(client: Client, message: Message):
 @Bot.on_message(filters.regex("Get Video 🍒"))
 async def on_get_video(client: Client, message: Message):
     user_id = message.from_user.id
+        # Check if user is banned
+    if await db.ban_user_exist(user_id):
+        return await message.reply_text(BAN_TXT, quote=True)
+        
+    
+    # Check if user is subscribed (check for all users including admins)
+    if not await is_subscribed(client, message):
+        return await not_joined(client, message)
+        
     await get_video(client, message)
 
 
 @Bot.on_message(filters.regex("Get Photo 📸"))
 async def on_get_photo(client: Client, message: Message):
     user_id = message.from_user.id
+            # Check if user is banned
+    if await db.ban_user_exist(user_id):
+        return await message.reply_text(BAN_TXT, quote=True)
+        
+    
+    # Check if user is subscribed (check for all users including admins)
+    if not await is_subscribed(client, message):
+        return await not_joined(client, message)
+        
     await get_photo(client, message)
 
 
 @Bot.on_message(filters.regex("Get Batch 📦"))
 async def on_get_batch(client: Client, message: Message):
     user_id = message.from_user.id
+            # Check if user is banned
+    if await db.ban_user_exist(user_id):
+        return await message.reply_text(BAN_TXT, quote=True)
+        
+    
+    # Check if user is subscribed (check for all users including admins)
+    if not await is_subscribed(client, message):
+        return await not_joined(client, message)
     await get_batch(client, message)
 
 
