@@ -81,7 +81,7 @@ class Bot(Client):
             self.LOGGER(__name__).warning(
                 f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}"
             )
-            self.LOGGER(__name__).info("\nBot Stopped. @rohit_1888 for support")
+            self.LOGGER(__name__).info("\nBot Stopped. @BLU3LADY for support")
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
@@ -102,7 +102,7 @@ class Bot(Client):
         print("Bot is now active and ready to receive commands!")
         print("="*50 + "\n")
         
-        self.LOGGER(__name__).info(f"Bot Running..! Made by @rohit_1888")
+        self.LOGGER(__name__).info(f"Bot Running..! Made by @BLU3LADY")
         self.LOGGER(__name__).info(f"Bot Username: @{self.username}")
 
         # Start Web Server
@@ -113,7 +113,7 @@ class Bot(Client):
         try:
             await self.send_message(
                 OWNER_ID,
-                text=f"<b><blockquote>🤖 Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ by @rohit_1888</blockquote></b>"
+                text=f"<b><blockquote>🤖 Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ by @BLU3LADY</blockquote></b>"
             )
         except:
             pass
@@ -127,7 +127,7 @@ class Bot(Client):
         """Run the bot."""
         loop = asyncio.get_event_loop()
         loop.run_until_complete(self.start())
-        self.LOGGER(__name__).info("Bot is now running. Thanks to @rohit_1888")
+        self.LOGGER(__name__).info("Bot is now running. Thanks to @BLU3LADY")
         try:
             loop.run_forever()
         except KeyboardInterrupt:

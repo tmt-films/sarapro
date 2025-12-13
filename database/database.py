@@ -290,7 +290,7 @@ class Rohit:
         data = await self.channel_button_link_data.find_one({})
         if data:
             return data.get('button_name'), data.get('button_link')
-        return ' Channel', 'https://t.me/Javpostr'
+        return ' Channel', 'https://t.me/BLUE_R0SES'
     
     async def get_channel_button_links(self):
         """Get both channel buttons (button1 and button2)"""
@@ -300,7 +300,7 @@ class Rohit:
                 data.get('button_name'), data.get('button_link'),
                 data.get('button_name2'), data.get('button_link2')
             )
-        return ' Channel', 'https://t.me/Javpostr', None, None
+        return ' Channel', 'https://t.me/BLUE_R0SES', None, None
 
 
     # DELETE TIMER SETTINGS

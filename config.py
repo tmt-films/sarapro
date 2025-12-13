@@ -46,7 +46,7 @@ QR_PIC = os.environ.get("QR_PIC", "https://graph.org/file/894fef0a8b13ab4e46117-
 PICS = (os.environ.get("PICS", "https://graph.org/file/1fc526b363c759f2a154a-84319e90b899344ca1.jpg https://graph.org/file/081e39049f441e33600d7-714ddb2b2b37e0563b.jpg https://graph.org/file/604716a0e6cf18f715701-c68e4f9aa382c8b69e.jpg https://graph.org/file/d351fccfbe3abaf29ac46-c0db9c0cd3e9720242.jpg")).split() #Required
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>ʙʏ @Javpostr</b>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>ʙʏ @BLUE_R0SES</b>")
 
 
 #Set true if you want Disable your Channel Posts Share button
