@@ -26,8 +26,8 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "8454765899"))
 
 #Port
 PORT = os.environ.get("PORT", "3435")
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://obito:umaid2008@cluster0.engyc.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "66")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://sarra:sarra@cluster0.va2usbg.mongodb.net/?appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "sara")
 
 IS_VERIFY = os.environ.get("IS_VERIFY", "false")
 
@@ -35,15 +35,15 @@ TUT_VID = os.environ.get("TUT_VID", "https://t.me/delight_link/2")
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "200"))
 
-START_PIC = os.environ.get("START_PIC", "https://telegra.ph/file/ec17880d61180d3312d6a.jpg")
+START_PIC = os.environ.get("START_PIC", "https://graph.org/file/604716a0e6cf18f715701-c68e4f9aa382c8b69e.jpg")
 
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://telegra.ph/file/e292b12890b8b4b9dcbd1.jpg")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://graph.org/file/d351fccfbe3abaf29ac46-c0db9c0cd3e9720242.jpg")
 
-QR_PIC = os.environ.get("QR_PIC", "https://envs.sh/B7w.png")
+QR_PIC = os.environ.get("QR_PIC", "https://graph.org/file/894fef0a8b13ab4e46117-75da0530835c83d498.jpg")
 
 #Collection of pics for Bot // #Optional but atleast one pic link should be replaced if you don't want predefined links
 
-PICS = (os.environ.get("PICS", "https://envs.sh/4Iq.jpg https://envs.sh/4IW.jpg https://envs.sh/4IB.jpg https://envs.sh/4In.jpg")).split() #Required
+PICS = (os.environ.get("PICS", "https://graph.org/file/1fc526b363c759f2a154a-84319e90b899344ca1.jpg https://graph.org/file/081e39049f441e33600d7-714ddb2b2b37e0563b.jpg https://graph.org/file/604716a0e6cf18f715701-c68e4f9aa382c8b69e.jpg https://graph.org/file/d351fccfbe3abaf29ac46-c0db9c0cd3e9720242.jpg")).split() #Required
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "<b>ʙʏ @Javpostr</b>")
@@ -116,6 +116,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
 
 
 
