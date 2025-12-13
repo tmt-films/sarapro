@@ -77,13 +77,13 @@ SCREENSHOT_URL = os.environ.get("SCREENSHOT_URL", f"t.me/rohit_1888")
 #7 Days
 PRICE1 = os.environ.get("PRICE1", "0 rs")
 #1 Month
-PRICE2 = os.environ.get("PRICE2", "60 rs")
+PRICE2 = os.environ.get("PRICE2", "199 rs")
 #3 Month
-PRICE3 = os.environ.get("PRICE3", "150 rs")
+PRICE3 = os.environ.get("PRICE3", "349 rs")
 #6 Month
-PRICE4 = os.environ.get("PRICE4", "280 rs")
+PRICE4 = os.environ.get("PRICE4", "599 rs")
 #1 Year
-PRICE5 = os.environ.get("PRICE5", "550 rs")
+PRICE5 = os.environ.get("PRICE5", "1999 rs")
 #===================(END)========================#
 
 #==========================(REFERRAL SYSTEM)====================#
@@ -116,6 +116,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
+
 
 
 
