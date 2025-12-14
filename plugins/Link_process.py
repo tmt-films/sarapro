@@ -64,6 +64,7 @@ async def update_bot(client, message):
     & ~filters.regex("^Get Video 🍒$")
     & ~filters.regex("^Get Photo 📸$")
     & ~filters.regex("^Get Batch 📦$")
+    & ~filters.regex("^Plan Status 🔖$")
 )
 async def handle_message(client: Client, message: Message):
     user_id = message.from_user.id
